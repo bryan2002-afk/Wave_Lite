@@ -312,11 +312,15 @@ http://localhost/wave-lite
 
 ## 🪪 Credencial para Iniciar Sesión
 
-      ❗⚠️ Cambielos inmediatamente ⚠️❗
-
-User: admin
-Pss:  admin123
-
+Usuario:
+```text
+admin
+```
+Pss:
+```text
+admin123
+```        
+❗⚠️ Cambielos inmediatamente ⚠️❗
 =========================================
 ```
 ---
