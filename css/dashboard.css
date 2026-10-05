@@ -1,0 +1,728 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');*/
+
+
+
+
+
+*{
+    /*margin:0;
+    padding:0;*/
+    box-sizing:border-box;
+    /*font-family:'Poppins',sans-serif;*/
+}
+
+/*=========================================
+=            HEADER PRINCIPAL             =
+=========================================*/
+body{
+    /*background: rgb(15, 15, 15);*/
+    background: #181818;
+  
+}
+
+
+.top-line{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:5px;
+    /*background:linear-gradient(90deg,#0099ff,#00c8ff,#00e0ff);*/
+    background:linear-gradient(to bottom,#a24b8f,#4d246b);
+    z-index:9999;
+}
+
+header{
+
+    width:100%;
+    position:sticky;
+    top:5px;
+    z-index:1000;
+
+    background: black;
+
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(0,0,0,.08);
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.06);
+
+}
+
+.header-container{
+
+    width:min(1400px,100%);
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 0;
+
+    gap:30px;
+    background: black;
+
+}
+
+.logo{
+
+    display:flex;
+    align-items:center;
+
+}
+
+.logo img{
+
+    width:auto;
+    height:65px;
+
+    transition:.35s;
+
+}
+
+.logo img:hover{
+
+    transform:scale(1.06);
+
+}
+
+.header-container h1{
+
+    flex:1;
+
+    text-align:center;
+
+    font-size:2rem;
+    font-weight:700;
+
+    color: #f425ca;/*#0d6efd*/
+
+    margin:0;
+
+    letter-spacing:.5px;
+
+}
+
+/*==============================
+=      PERFIL USUARIO          =
+==============================*/
+
+.profile-container{
+
+    position:relative;
+    font-family:'Poppins',sans-serif;
+
+}
+
+.profile-btn{
+
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    padding:10px 18px;
+
+    background:#333;
+
+    
+
+    border-radius:16px;
+
+    border:1px solid #f425ca;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,.05);
+
+}
+
+.profile-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,.10);
+
+}
+
+.profile-btn img{
+
+    width:46px;
+    height:46px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:3px solid #f425ca;
+
+}
+
+.profile-btn span{
+
+    font-size:.95rem;
+    color:white;
+
+}
+
+.profile-btn strong{
+
+    font-weight:600;
+
+}
+
+.arrow{
+
+    font-size:2rem;
+
+    color:#f425ca;
+
+    transition:.35s;
+
+}
+
+.rotate{
+
+    transform:rotate(180deg);
+
+}
+
+/*==============================
+=      DROPDOWN MENU           =
+==============================*/
+
+
+.dropdown-menu{
+
+    position:absolute;
+
+    top:72px;
+    right:0;
+
+    width:240px;
+
+    padding:8px;
+
+    list-style:none;
+
+    border-radius:18px;
+
+    background:#333;
+
+    border:1px solid #f425ca;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.15);
+
+    display:none;
+
+    overflow:hidden;
+
+}
+
+
+.dropdown-menu.active{
+
+    display:block;
+
+    animation:fadeDown .25s ease;
+
+}
+
+.dropdown-menu li{
+
+    margin:4px 0;
+
+}
+
+.dropdown-menu li a{
+
+    display:flex;
+    align-items:center;
+
+    gap:12px;
+
+    padding:14px;
+
+    text-decoration:none;
+
+    color:white;
+
+    border-radius:12px;
+
+    transition:.25s;
+
+}
+
+.dropdown-menu li a:hover{
+
+    background:#eef7ff;
+
+    color:#0d6efd;
+
+}
+
+.dropdown-menu li a i{
+
+    width:22px;
+
+    text-align:center;
+
+    font-size:18px;
+
+}
+
+.dropdown-menu li:last-child a{
+
+    color:#f4706e;
+
+}
+
+.dropdown-menu li:last-child a:hover{
+
+    background:#fff1f1;
+
+}
+
+/*==============================
+=         ANIMACIÓN            =
+==============================*/
+
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+        transform:translateY(-10px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+/*
+.pizarra{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family: "Oswald", sans-serif;
+    background: rgb(12, 12, 12);
+   
+}*/
+
+.pizarra{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+
+    gap:30px;
+    font-family: "Oswald", sans-serif;
+    padding:40px;
+
+}
+
+.card{
+    width:100%;
+    max-width:420px;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.35s;
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+   
+
+    /* Color propio del card 
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+    background:linear-gradient(135deg,#14532d,#16a34a,#4ade80);*/
+    
+    border:1px solid rgba(255,255,255,.12);
+}
+
+
+#card1{
+    background:linear-gradient(135deg,#14532d,#16a34a,#4ade80);
+}
+
+#card2{
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+}
+
+#card3{
+    /*background:linear-gradient(135deg,#7c2d12,#ea580c,#fb923c);*/
+    background:linear-gradient(135deg,#713f12,#ca8a04,#facc15);
+}
+
+#card4{
+    background:linear-gradient(135deg,#581c87,#9333ea,#c084fc);
+}
+
+#card5{
+    /*background:linear-gradient(135deg,#7f1d1d,#dc2626,#f87171);*/
+    background:linear-gradient(135deg,#3e2723,#6d4c41,#a1887f);
+}
+
+#card6{
+    background:linear-gradient(135deg,#134e4a,#0d9488,#2dd4bf);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,.45);
+}
+
+/*==============================
+      ENLACE COMPLETO
+==============================*/
+
+.card-opciones{
+    display:flex;
+    align-items:center;
+    text-decoration:none;
+    color:#fff;
+    padding:25px;
+    gap:25px;
+}
+
+/*==============================
+         IMAGEN
+==============================*/
+
+.card-img{
+    width:110px;
+    height:110px;
+    background:rgba(255,255,255,.08);
+    border-radius: 8px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-shrink:0;
+}
+
+.card-img img{
+    width:95px;
+    transition:.4s;
+}
+
+.card:hover .card-img img{
+    transform:scale(1.1) rotate(-5deg);
+}
+
+/*==============================
+        CONTENIDO
+==============================*/
+
+.card-content{
+    flex:1;
+}
+
+.card-content h3{
+    font-size:28px;
+    font-weight:600;
+    margin-bottom:8px;
+    color: rgb(12, 12, 12);
+}
+
+.card-content p{
+    color:#333;
+    margin-bottom:25px;
+    font-size:15px;
+}
+
+/*==============================
+       VER MÁS
+==============================*/
+
+.ver-mas{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-weight:500;
+    color: black;  /* #fff */
+}
+
+.icon-circle2{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:#196cf3;  /*  #3b82f6  */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition:.3s;
+}
+
+.icon-circle2 i{
+    font-size:15px;
+    color: black; /* #fff */
+}
+
+.card:hover .icon-circle2{
+    background: #5694f7 ;  /* #60a5fa */
+    transform:rotate(45deg);
+}
+
+
+
+
+/*=========================================
+=          RESPONSIVE TABLET              =
+=========================================*/
+@media (max-width: 992px){
+
+    .header-container{
+        padding:15px;
+        gap:15px;
+    }
+
+    .header-container h1{
+        font-size:1.7rem;
+    }
+
+    .pizarra{
+        grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+        padding:25px;
+        gap:20px;
+    }
+
+    .card{
+        width:100%;
+    }
+
+}
+
+
+/*=========================================
+=        RESPONSIVE CELULAR               =
+=========================================*/
+@media (max-width:768px){
+
+    /* Header */
+
+    .header-container{
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        align-items:center;
+
+        text-align:center;
+
+        padding:18px;
+
+    }
+
+    .logo img{
+        height:55px;
+    }
+
+    .header-container h1{
+        font-size:1.5rem;
+    }
+
+    /* Perfil */
+
+    .profile-btn{
+
+        width:100%;
+
+        justify-content:center;
+
+        padding:12px;
+
+    }
+
+    .dropdown-menu{
+
+        width:100%;
+
+        right:0;
+
+    }
+
+    /* Cards */
+
+    .pizarra{
+
+        grid-template-columns:1fr;
+
+        padding:20px;
+
+        gap:20px;
+
+    }
+
+    .card{
+
+        width:100%;
+
+    }
+
+    .card-opciones{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:18px;
+
+    }
+
+    .card-img{
+
+        width:90px;
+
+        height:90px;
+
+    }
+
+    .card-img img{
+
+        width:75px;
+
+    }
+
+    .card-content h3{
+
+        font-size:24px;
+
+    }
+
+    .card-content p{
+
+        font-size:14px;
+
+        margin-bottom:18px;
+
+    }
+
+    .ver-mas{
+
+        justify-content:center;
+
+    }
+
+}
+
+
+/*=========================================
+=      CELULARES PEQUEÑOS                 =
+=========================================*/
+@media (max-width:480px){
+
+    .header-container{
+
+        padding:15px;
+
+    }
+
+    .header-container h1{
+
+        font-size:1.25rem;
+
+    }
+
+    .logo img{
+
+        height:48px;
+
+    }
+
+    .profile-btn{
+
+        gap:10px;
+
+        padding:10px;
+
+    }
+
+    .profile-btn img{
+
+        width:40px;
+
+        height:40px;
+
+    }
+
+    .profile-btn span{
+
+        font-size:.85rem;
+
+    }
+
+    .arrow{
+
+        font-size:1.6rem;
+
+    }
+
+    .pizarra{
+
+        padding:15px;
+
+        gap:15px;
+
+    }
+
+    .card{
+
+        border-radius:16px;
+
+    }
+
+    .card-opciones{
+
+        padding:18px;
+
+    }
+
+    .card-img{
+
+        width:80px;
+
+        height:80px;
+
+    }
+
+    .card-img img{
+
+        width:65px;
+
+    }
+
+    .card-content h3{
+
+        font-size:21px;
+
+    }
+
+    .card-content p{
+
+        font-size:13px;
+
+    }
+
+    .icon-circle2{
+
+        width:36px;
+
+        height:36px;
+
+    }
+
+}

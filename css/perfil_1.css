@@ -1,0 +1,547 @@
+
+
+
+
+
+/*___________  botones ACCIONES  ___________*/
+
+
+/*=========================================
+=        BOTONES SUPERIORES WAVE   Righteous       =
+=========================================*/
+
+.botones-arriba{
+
+    width:min(1300px,95%);
+    margin:30px auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    font-family: "Oswald", sans-serif;
+    gap:18px;
+
+}
+
+.btn-back,
+.btn-new{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:12px;
+
+    padding:14px 28px;
+
+    border-radius:16px;
+
+    text-decoration:none;
+
+    font-size:15px;
+    font-weight:600;
+
+    transition:.30s ease;
+
+    user-select:none;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.btn-new{
+
+    margin-left:auto;
+
+}
+
+/*=========================================
+=           BOTÓN REGRESAR                =
+=========================================*/
+
+.btn-back{
+
+    color:#fff;
+
+    background:linear-gradient(135deg,#0d6efd,#0099ff);
+
+    box-shadow:
+        0 10px 25px rgba(13,110,253,.30);
+
+}
+
+.btn-back i{
+
+    font-size:18px;
+
+    transition:.30s;
+
+}
+
+.btn-back span{
+
+    transition:.30s;
+
+}
+
+.btn-back:hover{
+
+    transform:translateY(-4px);
+
+    background:linear-gradient(135deg,#0b5ed7,#0087f5);
+
+    box-shadow:
+        0 16px 35px rgba(13,110,253,.40);
+
+}
+
+.btn-back:hover i{
+
+    transform:translateX(-6px);
+
+}
+
+.btn-back:hover span{
+
+    transform:translateX(-2px);
+
+}
+
+.btn-back:active{
+
+    transform:scale(.96);
+
+}
+
+/* =====================================
+   BOTÓN NUEVO
+===================================== */
+/*=========================================
+=             BOTÓN NUEVO                 =
+=========================================*/
+
+.btn-new{
+
+    color:#000;
+
+    background:linear-gradient(135deg,#ffd54f,#ffc107);
+
+    font-weight:700;
+
+    box-shadow:
+        0 10px 25px rgba(255,193,7,.35);
+
+}
+
+.btn-new i{
+
+    font-size:18px;
+
+    transition:.30s;
+
+}
+
+.btn-new span{
+
+    transition:.30s;
+
+}
+
+.btn-new:hover{
+
+    transform:translateY(-4px);
+
+    background:linear-gradient(135deg,#ffca28,#ffb300);
+
+    box-shadow:
+        0 16px 35px rgba(255,193,7,.45);
+
+}
+
+.btn-new:hover i{
+
+    transform:rotate(90deg) scale(1.15);
+
+}
+
+.btn-new:hover span{
+
+    transform:translateX(2px);
+
+}
+
+.btn-new:active{
+
+    transform:scale(.96);
+
+}
+
+
+
+
+
+
+
+/*=========================================
+=          TÍTULO DE LA PIZARRA           =
+=========================================*/
+
+.titulo-pizzarra{
+
+    grid-column:1/-1;
+
+    margin:0;
+
+    padding-bottom:15px;
+
+    font-size:32px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    border-bottom:2px solid #f425ca;
+
+    letter-spacing:1px;
+
+}
+
+/*=========================================
+=           TARJETA DE USUARIO            =
+=========================================*/
+/*=========================================
+= CONTENEDOR
+=========================================*/
+.usuarios-cards{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+/*=========================================
+= TARJETA
+=========================================*/
+.usuario-card{
+
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    width: 800px;
+    max-width: 100%;
+
+    background: #333;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    border-left: 8px solid #2ecc71;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,.12);
+
+    transition: .3s ease;
+
+}
+
+.usuario-card:hover{
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 20px 40px rgba(0,0,0,.18);
+
+}
+
+/*=========================================
+= IMAGEN
+=========================================*/
+.usuario-imagen{
+
+    flex-shrink: 0;
+
+}
+
+.usuario-imagen img{
+
+    width: 170px;
+    height: 170px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid #2ecc71;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.18);
+
+}
+
+/*=========================================
+= INFORMACIÓN
+=========================================*/
+.usuario-info{
+
+    flex: 1;
+
+}
+
+.usuario-info h3{
+
+    margin: 0 0 25px;
+
+    /*font-family: "Lilita One", cursive;*/
+
+    font-size: 34px;
+
+    color: rgba(232, 230, 230, 0.792);
+
+    letter-spacing: 1px;
+
+}
+
+.usuario-info p{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 12px 0;
+
+    padding: 14px 18px;
+
+    background: #f8f9fa;
+
+    border-radius: 12px;
+
+    border-left: 5px solid #2ecc71;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 16px;
+
+    color: #555;
+
+}
+
+.usuario-info strong{
+
+    color: #2c3e50;
+
+}
+
+
+
+/*=========================================
+=         RESPONSIVE TABLET               =
+=========================================*/
+@media (max-width:992px){
+
+    /* Botones superiores */
+
+    .botones-arriba{
+
+        flex-wrap:wrap;
+
+        gap:15px;
+
+    }
+
+    .titulo-pizzarra{
+
+        font-size:28px;
+
+    }
+
+    /* Tarjeta */
+
+    .usuario-card{
+
+        width:100%;
+
+        gap:25px;
+
+        padding:25px;
+
+    }
+
+    .usuario-imagen img{
+
+        width:150px;
+
+        height:150px;
+
+    }
+
+    .usuario-info h3{
+
+        font-size:30px;
+
+    }
+
+}
+
+
+/*=========================================
+=         RESPONSIVE CELULAR              =
+=========================================*/
+@media (max-width:768px){
+
+    /* Botones superiores */
+
+    .botones-arriba{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:15px;
+
+    }
+
+    .btn-back,
+    .btn-new{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+    /* Título */
+
+    .titulo-pizzarra{
+
+        font-size:26px;
+
+        text-align:center;
+
+        padding-bottom:12px;
+
+    }
+
+    /* Tarjeta */
+
+    .usuarios-cards{
+
+        padding:20px 10px;
+
+    }
+
+    .usuario-card{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:22px;
+
+        padding:22px;
+
+        border-left:none;
+
+        border-top:8px solid #2ecc71;
+
+    }
+
+    .usuario-imagen img{
+
+        width:140px;
+
+        height:140px;
+
+    }
+
+    .usuario-info{
+
+        width:100%;
+
+    }
+
+    .usuario-info h3{
+
+        font-size:28px;
+
+        margin-bottom:18px;
+
+    }
+
+    .usuario-info p{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        text-align:center;
+
+        gap:8px;
+
+        font-size:15px;
+
+    }
+
+}
+
+
+/*=========================================
+=       CELULARES PEQUEÑOS                =
+=========================================*/
+@media (max-width:480px){
+
+    .titulo-pizzarra{
+
+        font-size:22px;
+
+    }
+
+    .usuarios-cards{
+
+        padding:15px 5px;
+
+    }
+
+    .usuario-card{
+
+        padding:18px;
+
+        border-radius:16px;
+
+    }
+
+    .usuario-imagen img{
+
+        width:110px;
+
+        height:110px;
+
+        border-width:4px;
+
+    }
+
+    .usuario-info h3{
+
+        font-size:24px;
+
+        margin-bottom:15px;
+
+    }
+
+    .usuario-info p{
+
+        padding:12px;
+
+        font-size:14px;
+
+    }
+
+    .btn-back,
+    .btn-new{
+
+        padding:12px;
+
+        font-size:14px;
+
+        border-radius:12px;
+
+    }
+
+}

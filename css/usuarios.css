@@ -1,0 +1,593 @@
+/*==================================================
+        BOTONES SUPERIORES
+==================================================*/
+
+.botones-arriba{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+
+    padding:20px 25px 10px;
+}
+
+
+/* Botón regresar */
+.btn-back,
+.btn-new{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+
+    min-height:44px;
+    padding:10px 18px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+    font-family:"Inter", sans-serif;
+    font-size:15px;
+    font-weight:600;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+}
+
+
+/*=========================================
+        BOTÓN REGRESAR
+=========================================*/
+
+.btn-back{
+    color:#fff;
+
+    background:linear-gradient(135deg,#0d6efd,#0099ff);
+
+    box-shadow:
+        0 10px 25px rgba(13,110,253,.30);
+}
+
+.btn-back i{
+    font-size:18px;
+
+    transition:.30s;
+}
+
+.btn-back span{
+    transition:.30s;
+}
+
+.btn-back:hover{
+    transform:translateY(-4px);
+
+    background:linear-gradient(135deg,#0b5ed7,#0087f5);
+
+    box-shadow:
+        0 16px 35px rgba(13,110,253,.40);
+}
+
+.btn-back:hover i{
+    transform:translateX(-6px);
+}
+
+.btn-back:hover span{
+    transform:translateX(-2px);
+}
+
+.btn-back:active{
+    transform:scale(.96);
+}
+
+
+/*=========================================
+        BOTÓN NUEVO
+=========================================*/
+
+.btn-new{
+    color:#000;
+
+    background:linear-gradient(135deg,#ffd54f,#ffc107);
+
+    font-weight:700;
+
+    box-shadow:
+        0 10px 25px rgba(255,193,7,.35);
+}
+
+.btn-new i{
+    font-size:18px;
+
+    transition:.30s;
+}
+
+.btn-new span{
+    transition:.30s;
+}
+
+.btn-new:hover{
+    transform:translateY(-4px);
+
+    background:linear-gradient(135deg,#ffca28,#ffb300);
+
+    box-shadow:
+        0 16px 35px rgba(255,193,7,.45);
+}
+
+.btn-new:hover i{
+    transform:rotate(90deg) scale(1.15);
+}
+
+.btn-new:hover span{
+    transform:translateX(2px);
+}
+
+.btn-new:active{
+    transform:scale(.96);
+}
+
+/*==================================================
+        PIZARRA
+==================================================*/
+
+.pizarra{
+    width:calc(100% - 50px);
+
+    margin:15px auto 30px;
+
+    padding:25px;
+
+    background:#232323;
+
+    border:1px solid #303030;
+    border-radius:18px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.20);
+}
+
+
+/* TÍTULO */
+.titulo-pizzarra{
+    display:flex;
+    align-items:center;
+
+    margin:0 0 25px;
+
+    padding-bottom:15px;
+
+    border-bottom:1px solid #383838;
+
+    color:#fff;
+
+    font-family:"Righteous", sans-serif;
+    font-size:25px;
+    font-weight:400;
+    border-bottom:2px solid #f425ca;
+}
+
+
+/*==================================================
+        CONTENEDOR DE USUARIOS
+==================================================*/
+
+.usuarios-cards{
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(280px,1fr));
+
+    gap:20px;
+}
+
+
+/*==================================================
+        TARJETA DE USUARIO
+==================================================*/
+
+.usuario-card{
+    display:grid;
+
+    grid-template-columns:80px 1fr;
+    grid-template-rows:auto auto;
+
+    column-gap:15px;
+    row-gap:15px;
+
+    padding:18px;
+
+    background:#2b2b2b;
+
+    border:1px solid #3c3c3c;
+    border-radius:15px;
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+}
+
+.usuario-card:hover{
+    transform:translateY(-4px);
+
+    border-color:#f425ca;
+
+    box-shadow:
+        0 12px 28px rgba(0,0,0,.30);
+}
+
+
+/*==================================================
+        IMAGEN DEL USUARIO
+==================================================*/
+
+.usuario-img{
+    grid-column:1;
+    grid-row:1;
+
+    width:80px;
+    height:80px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    overflow:hidden;
+
+    border-radius:50%;
+
+    background:#202020;
+
+    border:2px solid #f425ca;
+}
+
+.usuario-img img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+
+/*==================================================
+        INFORMACIÓN
+==================================================*/
+
+.usuario-info{
+    grid-column:2;
+    grid-row:1;
+
+    min-width:0;
+}
+
+.usuario-info h3{
+    margin:0 0 10px;
+
+    color:#fff;
+
+    font-family:"Righteous", sans-serif;
+    font-size:20px;
+    font-weight:400;
+
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.usuario-info p{
+    margin:5px 0;
+
+    color:#b5b5b5;
+
+    font-family:"Inter", sans-serif;
+    font-size:14px;
+    line-height:1.4;
+}
+
+.usuario-info p strong{
+    color:#fff;
+}
+
+
+/*==================================================
+        ESTADOS
+==================================================*/
+
+.badge-activo,
+.badge-inactivo{
+    display:inline-flex;
+    align-items:center;
+
+    margin-left:5px;
+    padding:4px 9px;
+
+    border-radius:20px;
+
+    font-size:12px;
+    font-weight:700;
+}
+
+
+/* ACTIVO */
+.badge-activo{
+    color:#69f0ae;
+    background:rgba(0,200,83,.12);
+    border:1px solid rgba(0,200,83,.35);
+}
+
+
+/* INACTIVO */
+.badge-inactivo{
+    color:#ff6b6b;
+    background:rgba(244,67,54,.12);
+    border:1px solid rgba(244,67,54,.35);
+}
+
+
+/*==================================================
+        ACCIONES
+==================================================*/
+
+.usuario-actions{
+    grid-column:1 / -1;
+    grid-row:2;
+
+    display:flex;
+    align-items:center;
+
+    gap:10px;
+
+    padding-top:15px;
+
+    border-top:1px solid #3c3c3c;
+}
+
+
+/* Botones de acción */
+.btn-edit,
+.btn-delete,
+.btn-session{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:7px;
+
+    min-height:38px;
+    padding:8px 13px;
+
+    border-radius:9px;
+
+    text-decoration:none;
+
+    font-family:"Inter", sans-serif;
+    font-size:13px;
+    font-weight:600;
+
+    transition:
+        transform .2s ease,
+        background .2s ease,
+        box-shadow .2s ease;
+}
+
+
+/* EDITAR */
+.btn-edit{
+    color:#9ec5ff;
+
+    background:rgba(63,81,181,.15);
+
+    border:1px solid rgba(63,81,181,.45);
+}
+
+.btn-edit:hover{
+    color:#fff;
+
+    background:#3f51b5;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 6px 15px rgba(63,81,181,.25);
+}
+
+
+/* BORRAR */
+.btn-delete{
+    color:#ff8080;
+
+    background:rgba(244,67,54,.10);
+
+    border:1px solid rgba(244,67,54,.40);
+
+    cursor:pointer;
+}
+
+.btn-delete:hover{
+    color:#fff;
+
+    background:#d32f2f;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 6px 15px rgba(244,67,54,.25);
+}
+
+
+/* SESIÓN ACTUAL */
+.btn-session{
+    color:#69f0ae;
+
+    background:rgba(0,200,83,.10);
+
+    border:1px solid rgba(0,200,83,.35);
+
+    cursor:default;
+}
+
+
+/*==================================================
+        TABLETS
+==================================================*/
+
+@media (max-width:900px){
+
+    .botones-arriba{
+        padding:18px 20px 10px;
+    }
+
+    .pizarra{
+        width:calc(100% - 40px);
+        padding:20px;
+    }
+
+    .usuarios-cards{
+        grid-template-columns:
+            repeat(2,1fr);
+
+        gap:18px;
+    }
+
+}
+
+
+/*==================================================
+        TELÉFONOS
+==================================================*/
+
+@media (max-width:600px){
+
+    .botones-arriba{
+        padding:15px 18px 8px;
+        gap:10px;
+    }
+
+    .btn-back,
+    .btn-new{
+        flex:1;
+
+        min-height:42px;
+
+        padding:9px 12px;
+
+        font-size:14px;
+    }
+
+    .pizarra{
+        width:calc(100% - 30px);
+
+        margin:12px auto 25px;
+
+        padding:16px;
+
+        border-radius:15px;
+    }
+
+    .titulo-pizzarra{
+        margin-bottom:18px;
+        padding-bottom:12px;
+
+        font-size:21px;
+    }
+
+    .usuarios-cards{
+        grid-template-columns:1fr;
+
+        gap:15px;
+    }
+
+    .usuario-card{
+        grid-template-columns:65px 1fr;
+
+        padding:15px;
+
+        column-gap:12px;
+    }
+
+    .usuario-img{
+        width:65px;
+        height:65px;
+    }
+
+    .usuario-info h3{
+        font-size:18px;
+    }
+
+    .usuario-info p{
+        font-size:13px;
+    }
+
+    .usuario-actions{
+        flex-wrap:wrap;
+    }
+
+}
+
+
+/*==================================================
+        TELÉFONOS PEQUEÑOS
+==================================================*/
+
+@media (max-width:420px){
+
+    .botones-arriba{
+        padding:12px 12px 6px;
+    }
+
+    .btn-back,
+    .btn-new{
+        min-height:40px;
+
+        padding:8px 10px;
+
+        font-size:13px;
+    }
+
+    .btn-back i,
+    .btn-new i{
+        font-size:14px;
+    }
+
+    .pizarra{
+        width:calc(100% - 24px);
+
+        padding:13px;
+    }
+
+    .titulo-pizzarra{
+        font-size:19px;
+    }
+
+    .usuario-card{
+        grid-template-columns:55px 1fr;
+
+        padding:13px;
+
+        gap:10px;
+    }
+
+    .usuario-img{
+        width:55px;
+        height:55px;
+    }
+
+    .usuario-info h3{
+        font-size:16px;
+    }
+
+    .usuario-info p{
+        font-size:12px;
+    }
+
+    .btn-edit,
+    .btn-delete,
+    .btn-session{
+        min-height:35px;
+
+        padding:7px 10px;
+
+        font-size:12px;
+    }
+
+}

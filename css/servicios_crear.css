@@ -1,0 +1,576 @@
+/*==================================================
+                    PIZARRA
+==================================================*/
+
+.pizarra{
+    width: calc(100% - 40px);
+    max-width: 900px;
+
+    margin: 30px auto 40px;
+    padding: 30px;
+
+    background: #202020;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.25);
+
+    color: #fff;
+}
+
+
+/*==================================================
+                TITULO DE LA PIZARRA
+==================================================*/
+
+.titulo-pizzarra{
+    margin: 0 0 25px;
+    padding-bottom: 14px;
+
+    color: #fff;
+
+    font-family: "Righteous", sans-serif;
+    font-size: 25px;
+    font-weight: normal;
+
+    border-bottom:2px solid #f425ca;
+}
+
+
+/*==================================================
+                     FORMULARIO
+==================================================*/
+
+.form-producto{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/*==================================================
+                    FORM GROUP
+==================================================*/
+
+.form-group{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.form-group label{
+    color: #fff;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.form-group input{
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #414141;
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #292929;
+    color: #fff;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+}
+
+
+.form-group input::placeholder{
+    color: #888;
+}
+
+
+.form-group input:focus{
+    border-color: #2563eb;
+
+    background: #2d2d2d;
+
+    box-shadow: 0 0 0 3px rgba(37,99,235,.15);
+}
+
+
+/*==================================================
+                    INPUT FILE
+==================================================*/
+
+.form-group input[type="file"]{
+    padding: 8px;
+
+    cursor: pointer;
+
+    color: #ccc;
+
+    background: #292929;
+}
+
+
+.form-group input[type="file"]::file-selector-button{
+    margin-right: 10px;
+
+    padding: 8px 12px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #333;
+    color: #fff;
+
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background .2s ease;
+}
+
+
+.form-group input[type="file"]::file-selector-button:hover{
+    background: #444;
+}
+
+
+/*==================================================
+                  VISTA PREVIA
+==================================================*/
+
+.preview-container{
+    width: 100%;
+    min-height: 220px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 5px;
+
+    padding: 15px;
+
+    border: 2px dashed #414141;
+    border-radius: 12px;
+
+    background: #181818;
+
+    overflow: hidden;
+}
+
+
+/* Imagen de vista previa */
+
+.preview-container img{
+    display: none;
+
+    max-width: 100%;
+    max-height: 300px;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+}
+
+
+/*==================================================
+                  BOTONES DEL FORMULARIO
+==================================================*/
+
+.form-buttons{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 5px;
+}
+
+
+/*==================================================
+                    BOTON CREAR
+==================================================*/
+/*
+
+.btn-save{
+    min-width: 120px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 11px 18px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: linear-gradient(135deg, #16a34a, #15803d);
+
+    color: #fff;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        opacity .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.btn-save:hover{
+    transform: translateY(-2px);
+
+    opacity: .92;
+
+    box-shadow: 0 5px 15px rgba(22,163,74,.25);
+}
+
+
+.btn-save i{
+    font-size: 14px;
+}
+*/
+
+/*==================================================
+                  BOTON CANCELAR
+==================================================*/
+
+/*
+.btn-cancel{
+    min-width: 120px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 11px 18px;
+
+    border-radius: 9px;
+
+    background: linear-gradient(135deg, #dc2626, #b91c1c);
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition:
+        transform .2s ease,
+        opacity .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.btn-cancel:hover{
+    transform: translateY(-2px);
+
+    opacity: .92;
+
+    box-shadow: 0 5px 15px rgba(220,38,38,.25);
+}
+
+
+.btn-cancel i{
+    font-size: 14px;
+}
+*/
+
+
+.btn-save,
+.btn-cancel{
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:8px;
+
+    min-height:44px;
+
+    padding:10px 20px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    font-family:"Inter",sans-serif;
+    font-size:14px;
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+}
+
+
+/*==================================================
+        BOTÓN CREAR
+==================================================*/
+
+.btn-save{
+    color:#fff;
+
+    background:linear-gradient(
+        135deg,
+        #00c853,
+        #00a844
+    );
+
+    border:1px solid #00e676;
+
+    box-shadow:
+        0 8px 20px rgba(0,200,83,.25);
+}
+
+
+.btn-save i{
+    font-size:16px;
+
+    transition:.25s;
+}
+
+
+.btn-save:hover{
+    transform:translateY(-3px);
+
+    background:linear-gradient(
+        135deg,
+        #00b84a,
+        #008f3a
+    );
+
+    box-shadow:
+        0 12px 28px rgba(0,200,83,.35);
+}
+
+
+.btn-save:hover i{
+    transform:scale(1.15);
+}
+
+
+.btn-save:active{
+    transform:scale(.96);
+}
+
+
+/*==================================================
+        BOTÓN CANCELAR
+==================================================*/
+
+.btn-cancel{
+    color:#fff;
+
+    background:linear-gradient(
+        135deg,
+        #dc3545,
+        #b02a37
+    );
+
+    border:1px solid #ff4d5e;
+
+    box-shadow:
+        0 8px 20px rgba(220,53,69,.25);
+}
+
+
+.btn-cancel i{
+    font-size:16px;
+
+    transition:.25s;
+}
+
+
+.btn-cancel:hover{
+    transform:translateY(-3px);
+
+    background:linear-gradient(
+        135deg,
+        #c82333,
+        #98212d
+    );
+
+    box-shadow:
+        0 12px 28px rgba(220,53,69,.35);
+}
+
+
+.btn-cancel:hover i{
+    transform:rotate(90deg);
+}
+
+
+.btn-cancel:active{
+    transform:scale(.96);
+}
+
+/*==================================================
+                    RESPONSIVE
+==================================================*/
+
+@media (max-width: 700px){
+
+    .pizarra{
+        width: calc(100% - 24px);
+
+        margin: 20px auto 30px;
+
+        padding: 20px;
+
+        border-radius: 15px;
+    }
+
+
+    .titulo-pizzarra{
+        font-size: 21px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .form-producto{
+        gap: 17px;
+    }
+
+
+    .form-group{
+        gap: 7px;
+    }
+
+
+    .form-group label{
+        font-size: 13px;
+    }
+
+
+    .form-group input{
+        padding: 11px 12px;
+
+        font-size: 13px;
+    }
+
+
+    .preview-container{
+        min-height: 190px;
+
+        padding: 12px;
+    }
+
+
+    .preview-container img{
+        max-height: 250px;
+    }
+
+
+    .form-buttons{
+        gap: 10px;
+    }
+
+
+    .btn-save,
+    .btn-cancel{
+        min-width: 110px;
+
+        padding: 10px 14px;
+
+        font-size: 13px;
+    }
+
+}
+
+
+/*==================================================
+                  TELEFONOS PEQUEÑOS
+==================================================*/
+
+@media (max-width: 430px){
+
+    .pizarra{
+        width: calc(100% - 16px);
+
+        margin: 15px auto 25px;
+
+        padding: 15px;
+
+        border-radius: 13px;
+    }
+
+
+    .titulo-pizzarra{
+        font-size: 19px;
+
+        padding-bottom: 11px;
+    }
+
+
+    .form-producto{
+        gap: 15px;
+    }
+
+
+    .form-buttons{
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+
+    .btn-save,
+    .btn-cancel{
+        width: 100%;
+
+        min-width: 0;
+
+        padding: 11px;
+    }
+
+
+    .preview-container{
+        min-height: 170px;
+    }
+
+
+    .preview-container img{
+        max-width: 100%;
+        max-height: 220px;
+    }
+
+}

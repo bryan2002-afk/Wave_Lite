@@ -1,0 +1,1454 @@
+/*==================================================*
+* BOTONES SUPERIORES
+*==================================================*/
+
+.botones-arriba{
+    width:100%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    gap:15px;
+
+    padding:20px 25px 10px;
+}
+
+
+/* Botón regresar */
+
+.btn-back,
+.btn-new{
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:9px;
+
+    min-height:44px;
+    padding:10px 18px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    font-family:"Inter", sans-serif;
+    font-size:15px;
+    font-weight:600;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+}
+
+
+/*==================================================*
+* BOTÓN REGRESAR
+*==================================================*/
+
+.btn-back{
+    color:#fff;
+
+    background:linear-gradient(
+        135deg,
+        #0d6efd,
+        #0099ff
+    );
+
+    box-shadow:
+        0 10px 25px rgba(13,110,253,.30);
+}
+
+
+.btn-back i{
+    font-size:18px;
+
+    transition:.30s;
+}
+
+
+.btn-back span{
+    transition:.30s;
+}
+
+
+.btn-back:hover{
+    transform:translateY(-4px);
+
+    background:linear-gradient(
+        135deg,
+        #0b5ed7,
+        #0087f5
+    );
+
+    box-shadow:
+        0 16px 35px rgba(13,110,253,.40);
+}
+
+
+.btn-back:hover i{
+    transform:translateX(-6px);
+}
+
+
+.btn-back:hover span{
+    transform:translateX(-2px);
+}
+
+
+.btn-back:active{
+    transform:scale(.96);
+}
+
+
+/*==================================================*
+* BOTÓN NUEVO
+*==================================================*/
+
+.btn-new{
+    color:#000;
+
+    background:linear-gradient(
+        135deg,
+        #ffd54f,
+        #ffc107
+    );
+
+    font-weight:700;
+
+    box-shadow:
+        0 10px 25px rgba(255,193,7,.35);
+}
+
+
+.btn-new i{
+    font-size:18px;
+
+    transition:.30s;
+}
+
+
+.btn-new span{
+    transition:.30s;
+}
+
+
+.btn-new:hover{
+    transform:translateY(-4px);
+
+    background:linear-gradient(
+        135deg,
+        #ffca28,
+        #ffb300
+    );
+
+    box-shadow:
+        0 16px 35px rgba(255,193,7,.45);
+}
+
+
+.btn-new:hover i{
+    transform:rotate(90deg) scale(1.15);
+}
+
+
+.btn-new:hover span{
+    transform:translateX(2px);
+}
+
+
+.btn-new:active{
+    transform:scale(.96);
+}
+
+
+/*==================================================
+=                    PIZARRA
+==================================================*/
+
+.pizarra{
+
+    width:min(1300px,95%);
+
+    margin:30px auto;
+
+    padding:20px;
+
+    font-family:"Oswald",sans-serif;
+
+}
+
+
+
+/*==================================================
+=              TÍTULO DE LA PIZARRA
+==================================================*/
+
+.titulo-pizzarra{
+
+    margin:0;
+
+    padding-bottom:15px;
+
+    font-size:32px;
+
+    font-weight:700;
+
+    color:#fff;
+
+    border-bottom:2px solid #f425ca;
+
+    letter-spacing:1px;
+
+}
+
+
+
+/*==================================================
+=              CONTENEDOR DE TARJETAS
+==================================================*/
+
+.usuarios-cards{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:25px;
+
+    margin-top:25px;
+
+}
+
+
+
+/*==================================================
+=                    TARJETA
+==================================================*/
+
+.usuario-card{
+
+    background:#252525;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    box-shadow:
+        0 12px 25px rgba(0,0,0,.30);
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+
+}
+
+
+.usuario-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#f425ca;
+
+    box-shadow:
+        0 18px 40px rgba(244,37,202,.18);
+
+}
+
+
+
+/*==================================================
+=                  PARTE SUPERIOR
+==================================================*/
+
+.usuario-top{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:20px;
+
+}
+
+
+
+/*==================================================
+=                 INFORMACIÓN TEXTO
+==================================================*/
+
+.usuario-texto{
+
+    flex:1;
+
+    min-width:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+
+.usuario-texto h3{
+
+    margin:0;
+
+    color:#2ecc71;
+
+    font-size:26px;
+
+    line-height:1.2;
+
+    word-break:break-word;
+
+}
+
+
+
+/*==================================================
+=                      NOTAS
+==================================================*/
+
+.usuario-notas{
+
+    background:#1f1f1f;
+
+    border-radius:12px;
+
+    padding:12px;
+
+    border-left:4px solid #3bcbec;
+
+    word-break:break-word;
+
+}
+
+
+.usuario-notas strong{
+
+    display:block;
+
+    color:#3bcbec;
+
+    margin-bottom:8px;
+
+    font-size:14px;
+
+}
+
+
+.usuario-notas span{
+
+    display:block;
+
+    color:#bdbdbd;
+
+    font-size:15px;
+
+    line-height:1.5;
+
+    word-break:break-word;
+
+}
+
+
+
+/*==================================================
+=                     IMAGEN
+==================================================*/
+
+.usuario-img{
+
+    width:90px;
+
+    height:90px;
+
+    flex-shrink:0;
+
+}
+
+
+.usuario-img img{
+
+    width:90px;
+
+    height:90px;
+
+    display:block;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:3px solid #f425ca;
+
+    background:#333;
+
+}
+
+
+
+/*==================================================
+=                 INFORMACIÓN
+==================================================*/
+
+.usuario-info{
+
+    width:100%;
+
+    min-height:58px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    background:#e7e3e3;
+
+    padding:12px 15px;
+
+    border-radius:12px;
+
+    border:1px solid #252525;
+
+}
+
+
+.usuario-info strong{
+
+    min-width:75px;
+
+    color:#555;
+
+    font-size:14px;
+
+    white-space:nowrap;
+
+}
+
+
+.usuario-info strong i{
+
+    margin-right:4px;
+
+}
+
+
+.usuario-info span{
+
+    flex:1;
+
+    min-width:0;
+
+    color:#000;
+
+    font-size:15px;
+
+    word-break:break-word;
+
+}
+
+
+
+/*==================================================
+=                 CONTRASEÑA
+==================================================*/
+
+.password-text{
+
+    font-family:Consolas,monospace;
+
+    letter-spacing:1px;
+
+}
+
+
+
+/*==================================================
+=               BOTÓN COPIAR
+==================================================*/
+
+.btn-copy{
+
+    width:34px;
+
+    height:34px;
+
+    min-width:34px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#3bcbec;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    transition:
+        background .25s ease,
+        transform .25s ease;
+
+}
+
+
+.btn-copy:hover{
+
+    background:#275fae;
+
+    transform:scale(1.08);
+
+}
+
+
+.btn-copy i{
+
+    font-size:14px;
+
+}
+
+
+
+/*==================================================
+=              MOSTRAR CONTRASEÑA
+==================================================*/
+
+.toggle-password{
+
+    font-size:18px;
+
+    color:#3bcbec;
+
+    cursor:pointer;
+
+    transition:
+        color .25s ease,
+        transform .25s ease;
+
+}
+
+
+.toggle-password:hover{
+
+    color:#275fae;
+
+    transform:scale(1.1);
+
+}
+
+
+
+/*==================================================
+=                    ACCIONES
+==================================================*/
+
+.usuario-actions{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:12px;
+
+    margin-top:auto;
+
+}
+
+
+.usuario-actions a{
+
+    flex:1;
+
+}
+
+
+
+/*==================================================
+=                 BOTÓN EDITAR
+==================================================*/
+
+.btn-edit{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #3b82f6
+        );
+
+    transition:.30s;
+
+}
+
+
+.btn-edit:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 12px 22px rgba(37,99,235,.35);
+
+}
+
+
+
+/*==================================================
+=                 BOTÓN BORRAR
+==================================================*/
+
+.btn-delete{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dc2626,
+            #ef4444
+        );
+
+    transition:.30s;
+
+}
+
+
+.btn-delete:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 12px 22px rgba(220,38,38,.35);
+
+}
+
+
+
+/*==================================================
+=                SIN REGISTROS
+==================================================*/
+
+.sin-registros{
+
+    grid-column:1 / -1;
+
+    width:100%;
+
+    margin:10px 0;
+
+    padding:30px;
+
+    text-align:center;
+
+    color:#aaa;
+
+    background:#252525;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:15px;
+
+    font-size:16px;
+
+}
+
+
+
+/*==================================================
+=                    TABLET
+==================================================*/
+/*
+@media (max-width:992px){
+
+    .usuarios-cards{
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+
+    .titulo-pizzarra{
+
+        font-size:28px;
+
+    }
+
+}
+*/
+
+
+/*==================================================
+=                    CELULAR
+==================================================*/
+/*
+@media (max-width:768px){
+
+    .pizarra{
+
+        width:95%;
+
+        padding:15px;
+
+    }
+
+
+    .usuarios-cards{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+    }
+
+
+    .usuario-card{
+
+        padding:20px;
+
+    }
+
+
+    .titulo-pizzarra{
+
+        font-size:26px;
+
+        text-align:center;
+
+    }
+
+
+    .usuario-top{
+
+        flex-direction:column-reverse;
+
+        align-items:center;
+
+        text-align:center;
+
+    }
+
+
+    .usuario-texto{
+
+        width:100%;
+
+    }
+
+
+    .usuario-texto h3{
+
+        font-size:23px;
+
+    }
+
+
+    .usuario-img{
+
+        width:85px;
+
+        height:85px;
+
+    }
+
+
+    .usuario-img img{
+
+        width:85px;
+
+        height:85px;
+
+    }
+
+
+    .usuario-actions{
+
+        flex-direction:column;
+
+    }
+
+
+    .usuario-actions a{
+
+        width:100%;
+
+    }
+
+
+    .usuario-info{
+
+        flex-wrap:wrap;
+
+    }
+
+
+    .usuario-info strong{
+
+        min-width:auto;
+
+    }
+
+}
+*/
+
+
+/*==================================================
+=                CELULARES PEQUEÑOS
+==================================================*/
+/*
+@media (max-width:480px){
+
+    .pizarra{
+
+        width:calc(100% - 16px);
+
+        padding:12px;
+
+    }
+
+
+    .titulo-pizzarra{
+
+        font-size:22px;
+
+    }
+
+
+    .usuario-card{
+
+        padding:18px;
+
+        border-radius:16px;
+
+    }
+
+
+    .usuario-texto h3{
+
+        font-size:20px;
+
+    }
+
+
+    .usuario-info{
+
+        padding:10px;
+
+        gap:8px;
+
+    }
+
+
+    .usuario-info strong{
+
+        font-size:13px;
+
+    }
+
+
+    .usuario-info span{
+
+        font-size:14px;
+
+    }
+
+
+    .usuario-notas{
+
+        padding:10px;
+
+    }
+
+
+    .usuario-notas span{
+
+        font-size:14px;
+
+    }
+
+
+    .usuario-img{
+
+        width:75px;
+
+        height:75px;
+
+    }
+
+
+    .usuario-img img{
+
+        width:75px;
+
+        height:75px;
+
+    }
+
+
+    .btn-back,
+    .btn-new,
+    .btn-edit,
+    .btn-delete{
+
+        font-size:14px;
+
+        padding:12px;
+
+    }
+
+}*/
+
+
+/*=========================================================
+=                 RESPONSIVE CUENTAS                     =
+=========================================================*/
+
+/*---------------------------------------------------------
+  TABLETS Y PANTALLAS MEDIANAS
+---------------------------------------------------------*/
+
+@media (max-width: 992px){
+
+    .pizarra{
+        width: 94%;
+        padding: 18px;
+    }
+
+    .titulo-pizzarra{
+        font-size: 28px;
+    }
+
+    .usuarios-cards{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .usuario-card{
+        padding: 20px;
+        gap: 16px;
+    }
+
+    .usuario-top{
+        gap: 15px;
+    }
+
+    .usuario-texto h3{
+        font-size: 23px;
+    }
+
+    .usuario-img{
+        width: 85px;
+        height: 85px;
+    }
+
+    .usuario-img img{
+        width: 85px;
+        height: 85px;
+    }
+
+    .usuario-info{
+        gap: 9px;
+        padding: 11px 12px;
+    }
+
+    .usuario-info strong{
+        min-width: 70px;
+        font-size: 13px;
+    }
+
+    .usuario-info span{
+        font-size: 14px;
+        min-width: 0;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .btn-copy{
+        flex-shrink: 0;
+    }
+
+}
+
+
+/*---------------------------------------------------------
+  CELULARES
+---------------------------------------------------------*/
+
+@media (max-width: 768px){
+
+    .pizarra{
+        width: calc(100% - 24px);
+        margin: 20px auto 30px;
+        padding: 16px;
+    }
+
+    /*==============================
+      TÍTULO
+    ==============================*/
+
+    .titulo-pizzarra{
+        font-size: 24px;
+        text-align: center;
+        padding-bottom: 12px;
+    }
+
+    /*==============================
+      TARJETAS
+    ==============================*/
+
+    .usuarios-cards{
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-top: 20px;
+    }
+
+    .usuario-card{
+        width: 100%;
+        padding: 18px;
+        border-radius: 16px;
+        gap: 15px;
+    }
+
+    /*==============================
+      PARTE SUPERIOR
+    ==============================*/
+
+    .usuario-top{
+        width: 100%;
+
+        display: flex;
+        flex-direction: column-reverse;
+
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+
+        gap: 14px;
+    }
+
+    .usuario-texto{
+        width: 100%;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .usuario-texto h3{
+        font-size: 22px;
+        text-align: center;
+        width: 100%;
+    }
+
+    /*==============================
+      IMAGEN
+    ==============================*/
+
+    .usuario-img{
+        width: 85px;
+        height: 85px;
+    }
+
+    .usuario-img img{
+        width: 85px;
+        height: 85px;
+        border-width: 3px;
+    }
+
+    /*==============================
+      NOTAS
+    ==============================*/
+
+    .usuario-notas{
+        width: 100%;
+        padding: 11px;
+        text-align: left;
+    }
+
+    .usuario-notas strong{
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .usuario-notas span{
+        font-size: 14px;
+        line-height: 1.45;
+
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    /*==============================
+      CORREO / CONTRASEÑA
+    ==============================*/
+
+    .usuario-info{
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+
+        gap: 8px;
+
+        padding: 10px;
+
+        border-radius: 10px;
+
+        flex-wrap: nowrap;
+    }
+
+    .usuario-info strong{
+        min-width: auto;
+
+        display: flex;
+        align-items: center;
+
+        gap: 5px;
+
+        font-size: 13px;
+
+        flex-shrink: 0;
+    }
+
+    .usuario-info span{
+        min-width: 0;
+        flex: 1;
+
+        font-size: 14px;
+
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    /*==============================
+      CONTRASEÑA
+    ==============================*/
+
+    .password-text{
+        letter-spacing: 1px;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .toggle-password{
+        font-size: 17px;
+        flex-shrink: 0;
+    }
+
+    .btn-copy{
+        width: 32px;
+        height: 32px;
+
+        min-width: 32px;
+
+        flex-shrink: 0;
+    }
+
+    /*==============================
+      BOTONES
+    ==============================*/
+
+    .usuario-actions{
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+
+        margin-top: 3px;
+    }
+
+    .usuario-actions a{
+        width: 100%;
+
+        min-height: 44px;
+
+        justify-content: center;
+    }
+
+}
+
+
+/*---------------------------------------------------------
+  CELULARES PEQUEÑOS
+---------------------------------------------------------*/
+
+@media (max-width: 480px){
+
+    .pizarra{
+        width: calc(100% - 16px);
+
+        margin: 15px auto 25px;
+
+        padding: 13px;
+
+        border-radius: 14px;
+    }
+
+    /*==============================
+      TÍTULO
+    ==============================*/
+
+    .titulo-pizzarra{
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+
+    /*==============================
+      TARJETA
+    ==============================*/
+
+    .usuarios-cards{
+        gap: 14px;
+        margin-top: 16px;
+    }
+
+    .usuario-card{
+        padding: 14px;
+
+        border-radius: 14px;
+
+        gap: 12px;
+    }
+
+    /*==============================
+      PARTE SUPERIOR
+    ==============================*/
+
+    .usuario-top{
+        gap: 10px;
+    }
+
+    .usuario-texto{
+        gap: 8px;
+    }
+
+    .usuario-texto h3{
+        font-size: 19px;
+    }
+
+    /*==============================
+      IMAGEN
+    ==============================*/
+
+    .usuario-img{
+        width: 72px;
+        height: 72px;
+    }
+
+    .usuario-img img{
+        width: 72px;
+        height: 72px;
+
+        border-width: 3px;
+    }
+
+    /*==============================
+      NOTAS
+    ==============================*/
+
+    .usuario-notas{
+        padding: 9px;
+
+        border-left-width: 3px;
+    }
+
+    .usuario-notas strong{
+        font-size: 13px;
+    }
+
+    .usuario-notas span{
+        font-size: 13px;
+    }
+
+    /*==============================
+      INFORMACIÓN
+    ==============================*/
+
+    .usuario-info{
+        padding: 9px;
+
+        gap: 6px;
+    }
+
+    .usuario-info strong{
+        font-size: 12px;
+    }
+
+    .usuario-info strong i{
+        font-size: 12px;
+    }
+
+    .usuario-info span{
+        font-size: 13px;
+    }
+
+    /*==============================
+      BOTÓN COPIAR
+    ==============================*/
+
+    .btn-copy{
+        width: 30px;
+        height: 30px;
+
+        min-width: 30px;
+
+        font-size: 12px;
+    }
+
+    /*==============================
+      OJO CONTRASEÑA
+    ==============================*/
+
+    .toggle-password{
+        font-size: 16px;
+    }
+
+    /*==============================
+      BOTONES EDITAR / BORRAR
+    ==============================*/
+
+    .btn-edit,
+    .btn-delete{
+        width: 100%;
+
+        padding: 10px;
+
+        min-height: 42px;
+
+        font-size: 13px;
+    }
+
+}
+
+
+/*---------------------------------------------------------
+  TELÉFONOS MUY PEQUEÑOS
+---------------------------------------------------------*/
+
+@media (max-width: 360px){
+
+    .pizarra{
+        width: calc(100% - 10px);
+        padding: 10px;
+    }
+
+    .titulo-pizzarra{
+        font-size: 18px;
+    }
+
+    .usuario-card{
+        padding: 11px;
+    }
+
+    .usuario-texto h3{
+        font-size: 17px;
+    }
+
+    .usuario-img,
+    .usuario-img img{
+        width: 65px;
+        height: 65px;
+    }
+
+    .usuario-notas{
+        padding: 8px;
+    }
+
+    .usuario-notas strong{
+        font-size: 12px;
+    }
+
+    .usuario-notas span{
+        font-size: 12px;
+    }
+
+    .usuario-info{
+        padding: 8px;
+    }
+
+    .usuario-info strong{
+        font-size: 11px;
+    }
+
+    .usuario-info span{
+        font-size: 12px;
+    }
+
+    .btn-copy{
+        width: 28px;
+        height: 28px;
+        min-width: 28px;
+    }
+
+    .toggle-password{
+        font-size: 14px;
+    }
+
+    .btn-edit,
+    .btn-delete{
+        font-size: 12px;
+        padding: 9px;
+    }
+
+}

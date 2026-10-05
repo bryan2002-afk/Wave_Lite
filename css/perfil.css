@@ -1,0 +1,515 @@
+/*=========================================
+=             PIZARRA PERFIL              =
+=========================================*/
+
+.pizarra{
+
+    width:min(1000px,95%);
+
+    margin:30px auto;
+
+    padding:20px;
+
+}
+
+
+/*=========================================
+=          TÍTULO DE LA PIZARRA           =
+=========================================*/
+
+.titulo-pizzarra{
+
+    margin:0;
+
+    padding-bottom:15px;
+
+    font-size:32px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    border-bottom:2px solid #f425ca;
+
+    letter-spacing:1px;
+
+}
+
+
+/*=========================================
+=          CONTENEDOR DE TARJETAS         =
+=========================================*/
+
+.usuarios-cards{
+
+    width:100%;
+
+    margin-top:30px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+/*=========================================
+=              TARJETA PERFIL             =
+=========================================*/
+
+.usuario-card{
+
+    width:100%;
+
+    max-width:750px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:35px;
+
+    padding:30px;
+
+    background:#252525;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:22px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+    transition:.30s;
+
+}
+
+
+/* Efecto al pasar el mouse */
+
+.usuario-card:hover{
+
+    transform:translateY(-4px);
+
+    border-color:rgba(244,37,202,.35);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.45),
+        0 0 20px rgba(244,37,202,.08);
+
+}
+
+
+/*=========================================
+=           IMAGEN DEL USUARIO            =
+=========================================*/
+
+.usuario-imagen{
+
+    flex-shrink:0;
+
+    width:180px;
+
+    height:180px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+/* Imagen */
+
+.usuario-imagen img{
+
+    width:170px;
+
+    height:170px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:4px solid #f425ca;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.45);
+
+    transition:.30s;
+
+}
+
+
+/* Efecto de imagen */
+
+.usuario-card:hover .usuario-imagen img{
+
+    transform:scale(1.04);
+
+    box-shadow:
+        0 12px 35px rgba(244,37,202,.25);
+
+}
+
+
+/*=========================================
+=          INFORMACIÓN DEL PERFIL         =
+=========================================*/
+
+.usuario-info{
+
+    flex:1;
+
+    min-width:0;
+
+}
+
+
+/* Nombre */
+
+.usuario-info h3{
+
+    margin:0 0 20px 0;
+
+    color:#ffffff;
+
+    font-family:"Righteous",sans-serif;
+
+    font-size:30px;
+
+    font-weight:400;
+
+    letter-spacing:.5px;
+
+    border-bottom:1px solid #3c3c3c;
+
+    padding-bottom:12px;
+
+}
+
+
+/* Datos */
+
+.usuario-info p{
+
+    margin:12px 0;
+
+    color:#d0d0d0;
+
+    font-size:16px;
+
+    line-height:1.5;
+
+}
+
+
+/* Etiquetas */
+
+.usuario-info p strong{
+
+    color:#ffffff;
+
+    font-weight:700;
+
+}
+
+
+/*=========================================
+=             ESTADO ACTIVO               =
+=========================================*/
+
+.badge-activo{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:5px 12px;
+
+    background:rgba(34,197,94,.15);
+
+    color:#22c55e;
+
+    border:1px solid rgba(34,197,94,.35);
+
+    border-radius:20px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+
+/*=========================================
+=            ESTADO INACTIVO              =
+=========================================*/
+
+.badge-inactivo{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:5px 12px;
+
+    background:rgba(239,68,68,.15);
+
+    color:#ef4444;
+
+    border:1px solid rgba(239,68,68,.35);
+
+    border-radius:20px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+
+/*=========================================
+=             TABLET                      =
+=========================================*/
+
+@media (max-width:992px){
+
+    .pizarra{
+
+        width:min(900px,95%);
+
+        padding:20px;
+
+    }
+
+    .titulo-pizzarra{
+
+        font-size:28px;
+
+    }
+
+    .usuario-card{
+
+        max-width:700px;
+
+        gap:25px;
+
+        padding:25px;
+
+    }
+
+    .usuario-imagen{
+
+        width:150px;
+
+        height:150px;
+
+    }
+
+    .usuario-imagen img{
+
+        width:145px;
+
+        height:145px;
+
+    }
+
+    .usuario-info h3{
+
+        font-size:27px;
+
+    }
+
+}
+
+
+/*=========================================
+=             TELÉFONOS                   =
+=========================================*/
+
+@media (max-width:768px){
+
+    .pizarra{
+
+        width:95%;
+
+        padding:15px;
+
+        margin:25px auto;
+
+    }
+
+
+    .titulo-pizzarra{
+
+        font-size:26px;
+
+        text-align:center;
+
+        padding-bottom:12px;
+
+    }
+
+
+    .usuarios-cards{
+
+        margin-top:20px;
+
+    }
+
+
+    .usuario-card{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:20px;
+
+        padding:25px 20px;
+
+        border-radius:18px;
+
+    }
+
+
+    .usuario-imagen{
+
+        width:150px;
+
+        height:150px;
+
+    }
+
+
+    .usuario-imagen img{
+
+        width:145px;
+
+        height:145px;
+
+    }
+
+
+    .usuario-info{
+
+        width:100%;
+
+    }
+
+
+    .usuario-info h3{
+
+        font-size:25px;
+
+        margin-bottom:18px;
+
+        padding-bottom:10px;
+
+    }
+
+
+    .usuario-info p{
+
+        font-size:15px;
+
+        margin:11px 0;
+
+    }
+
+}
+
+
+/*=========================================
+=        CELULARES PEQUEÑOS               =
+=========================================*/
+
+@media (max-width:480px){
+
+    .pizarra{
+
+        width:94%;
+
+        padding:10px;
+
+        margin:20px auto;
+
+    }
+
+
+    .titulo-pizzarra{
+
+        font-size:22px;
+
+        letter-spacing:.5px;
+
+    }
+
+
+    .usuario-card{
+
+        padding:20px 16px;
+
+        gap:18px;
+
+        border-radius:16px;
+
+    }
+
+
+    .usuario-imagen{
+
+        width:120px;
+
+        height:120px;
+
+    }
+
+
+    .usuario-imagen img{
+
+        width:115px;
+
+        height:115px;
+
+        border-width:3px;
+
+    }
+
+
+    .usuario-info h3{
+
+        font-size:22px;
+
+        margin-bottom:15px;
+
+    }
+
+
+    .usuario-info p{
+
+        font-size:14px;
+
+        margin:10px 0;
+
+    }
+
+
+    .badge-activo,
+    .badge-inactivo{
+
+        padding:4px 10px;
+
+        font-size:13px;
+
+    }
+
+}

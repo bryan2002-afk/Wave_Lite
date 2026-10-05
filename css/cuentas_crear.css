@@ -1,0 +1,684 @@
+/*=========================================================
+=                     PIZARRA                            =
+=========================================================*/
+
+.pizarra{
+
+    width:min(900px,95%);
+
+    margin:35px auto 45px;
+
+    padding:28px;
+
+    background:#202020;
+
+    border-radius:18px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.30);
+
+    color:#fff;
+
+}
+
+
+/*=========================================================
+=                 TÍTULO DE LA PIZARRA                   =
+=========================================================*/
+
+.titulo-pizzarra{
+
+    margin:0 0 25px;
+
+    padding-bottom:14px;
+
+    color:#fff;
+
+    font-family:"Righteous",sans-serif;
+
+    font-size:27px;
+
+    font-weight:normal;
+
+    letter-spacing:.5px;
+
+    border-bottom:2px solid #f425ca;
+
+}
+
+
+/*=========================================================
+=                    FORMULARIO                          =
+=========================================================*/
+
+.form-producto{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+
+/*=========================================================
+=                  GRUPO DEL FORMULARIO                 =
+=========================================================*/
+
+.form-group{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+
+/* Elementos que ocupan todo el ancho */
+
+.form-group.full{
+
+    grid-column:1 / -1;
+
+}
+
+
+/*=========================================================
+=                       LABEL                            =
+=========================================================*/
+
+.form-group label{
+
+    color:#fff;
+
+    font-family:"Inter",sans-serif;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+
+/*=========================================================
+=                INPUT / SELECT                          =
+=========================================================*/
+
+.form-group input,
+.form-group select{
+
+    width:100%;
+
+    min-height:46px;
+
+    padding:11px 14px;
+
+    background:#292929;
+
+    color:#fff;
+
+    border:1px solid #414141;
+
+    border-radius:10px;
+
+    outline:none;
+
+    font-family:"Inter",sans-serif;
+
+    font-size:14px;
+
+    transition:
+        border-color .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+
+}
+
+
+/*=========================================================
+=                     SELECT                             =
+=========================================================*/
+
+.form-group select{
+
+    cursor:pointer;
+
+    appearance:auto;
+
+}
+
+
+/*=========================================================
+=                 PLACEHOLDER                           =
+=========================================================*/
+
+.form-group input::placeholder{
+
+    color:#888;
+
+}
+
+
+/*=========================================================
+=                  FOCUS INPUT                          =
+=========================================================*/
+
+.form-group input:focus,
+.form-group select:focus{
+
+    border-color:#f425ca;
+
+    background:#252525;
+
+    box-shadow:
+        0 0 0 3px rgba(244,37,202,.12);
+
+}
+
+
+/*=========================================================
+=               OPCIONES DEL SELECT                      =
+=========================================================*/
+
+.form-group select option{
+
+    background:#252525;
+
+    color:#fff;
+
+}
+
+
+/*=========================================================
+=              CAMPO CONTRASEÑA                         =
+=========================================================*/
+
+.form-group{
+
+    position:relative;
+
+}
+
+
+/*
+   Dejamos espacio para el icono
+   dentro del campo de contraseña.
+*/
+
+.form-group input[type="password"],
+.form-group input[type="text"]{
+
+    padding-right:48px;
+
+}
+
+
+/*=========================================================
+=             ICONO MOSTRAR CONTRASEÑA                  =
+=========================================================*/
+
+.form-group .toggle-password{
+
+    position:absolute;
+
+    right:15px;
+
+    top:36px;
+
+    color:#3bcbec;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:
+        color .25s ease,
+        transform .25s ease;
+
+}
+
+
+.form-group .toggle-password:hover{
+
+    color:#f425ca;
+
+    transform:scale(1.10);
+
+}
+
+
+/*=========================================================
+=                 BOTONES DEL FORMULARIO                =
+=========================================================*/
+
+.form-buttons{
+
+    grid-column:1 / -1;
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin-bottom:5px;
+
+}
+
+
+/*=========================================================
+=                    BOTÓN CREAR                         =
+=========================================================*/
+
+.btn-save{
+
+    min-width:130px;
+
+    min-height:44px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:9px;
+
+    padding:10px 20px;
+
+    border:none;
+
+    border-radius:10px;
+
+    color:#fff;
+
+    background:linear-gradient(
+        135deg,
+        #16a34a,
+        #22c55e
+    );
+
+    font-family:"Inter",sans-serif;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 8px 20px rgba(34,197,94,.25);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+
+}
+
+
+.btn-save i{
+
+    font-size:15px;
+
+    transition:.25s;
+
+}
+
+
+.btn-save:hover{
+
+    transform:translateY(-3px);
+
+    background:linear-gradient(
+        135deg,
+        #15803d,
+        #16a34a
+    );
+
+    box-shadow:
+        0 13px 28px rgba(34,197,94,.35);
+
+}
+
+
+.btn-save:hover i{
+
+    transform:scale(1.12);
+
+}
+
+
+.btn-save:active{
+
+    transform:scale(.96);
+
+}
+
+
+/*=========================================================
+=                   BOTÓN CANCELAR                       =
+=========================================================*/
+
+.btn-cancel{
+
+    min-width:130px;
+
+    min-height:44px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:9px;
+
+    padding:10px 20px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    background:linear-gradient(
+        135deg,
+        #dc2626,
+        #ef4444
+    );
+
+    font-family:"Inter",sans-serif;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    box-shadow:
+        0 8px 20px rgba(239,68,68,.25);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+
+}
+
+
+.btn-cancel i{
+
+    font-size:15px;
+
+    transition:.25s;
+
+}
+
+
+.btn-cancel:hover{
+
+    transform:translateY(-3px);
+
+    background:linear-gradient(
+        135deg,
+        #b91c1c,
+        #dc2626
+    );
+
+    box-shadow:
+        0 13px 28px rgba(239,68,68,.35);
+
+}
+
+
+.btn-cancel:hover i{
+
+    transform:rotate(90deg);
+
+}
+
+
+.btn-cancel:active{
+
+    transform:scale(.96);
+
+}
+
+
+/*=========================================================
+=                    RESPONSIVE                         =
+=========================================================*/
+
+/*---------------------------------------------------------
+  TABLET
+---------------------------------------------------------*/
+
+@media (max-width:768px){
+
+    .pizarra{
+
+        width:calc(100% - 24px);
+
+        margin:25px auto 30px;
+
+        padding:20px;
+
+        border-radius:16px;
+
+    }
+
+
+    .titulo-pizzarra{
+
+        font-size:23px;
+
+        margin-bottom:20px;
+
+    }
+
+
+    .form-producto{
+
+        grid-template-columns:1fr;
+
+        gap:17px;
+
+    }
+
+
+    .form-group.full{
+
+        grid-column:auto;
+
+    }
+
+
+    .form-buttons{
+
+        grid-column:auto;
+
+        flex-direction:row;
+
+        gap:12px;
+
+        margin-bottom:2px;
+
+    }
+
+
+    .btn-save,
+    .btn-cancel{
+
+        flex:1;
+
+        min-width:0;
+
+    }
+
+}
+
+
+/*---------------------------------------------------------
+  CELULARES PEQUEÑOS
+---------------------------------------------------------*/
+
+@media (max-width:480px){
+
+    .pizarra{
+
+        width:calc(100% - 16px);
+
+        margin:18px auto 25px;
+
+        padding:15px;
+
+        border-radius:14px;
+
+    }
+
+
+    .titulo-pizzarra{
+
+        font-size:20px;
+
+        text-align:center;
+
+        padding-bottom:11px;
+
+        margin-bottom:18px;
+
+    }
+
+
+    .form-producto{
+
+        gap:14px;
+
+    }
+
+
+    .form-group{
+
+        gap:7px;
+
+    }
+
+
+    .form-group label{
+
+        font-size:13px;
+
+    }
+
+
+    .form-group input,
+    .form-group select{
+
+        min-height:44px;
+
+        padding:10px 12px;
+
+        font-size:13px;
+
+        border-radius:9px;
+
+    }
+
+
+    .form-group input[type="password"],
+    .form-group input[type="text"]{
+
+        padding-right:44px;
+
+    }
+
+
+    .form-group .toggle-password{
+
+        right:13px;
+
+        top:34px;
+
+        font-size:16px;
+
+    }
+
+
+    .form-buttons{
+
+        gap:10px;
+
+    }
+
+
+    .btn-save,
+    .btn-cancel{
+
+        min-height:42px;
+
+        padding:9px 12px;
+
+        font-size:13px;
+
+    }
+
+
+    .btn-save i,
+    .btn-cancel i{
+
+        font-size:13px;
+
+    }
+
+}
+
+
+/*---------------------------------------------------------
+  TELÉFONOS MUY PEQUEÑOS
+---------------------------------------------------------*/
+
+@media (max-width:360px){
+
+    .pizarra{
+
+        width:calc(100% - 10px);
+
+        padding:12px;
+
+    }
+
+
+    .titulo-pizzarra{
+
+        font-size:18px;
+
+    }
+
+
+    .form-buttons{
+
+        flex-direction:column;
+
+        width:100%;
+
+    }
+
+
+    .btn-save,
+    .btn-cancel{
+
+        width:100%;
+
+    }
+
+}

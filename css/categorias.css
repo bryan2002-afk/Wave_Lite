@@ -1,0 +1,558 @@
+/*==================================================
+        BOTONES SUPERIORES
+==================================================*/
+
+.botones-arriba{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+
+    padding:20px 25px 10px;
+}
+
+
+/* Botón regresar */
+.btn-back,
+.btn-new{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+
+    min-height:44px;
+    padding:10px 18px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+    font-family:"Inter", sans-serif;
+    font-size:15px;
+    font-weight:600;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+}
+
+
+/*=========================================
+        BOTÓN REGRESAR
+=========================================*/
+
+.btn-back{
+    color:#fff;
+
+    background:linear-gradient(135deg,#0d6efd,#0099ff);
+
+    box-shadow:
+        0 10px 25px rgba(13,110,253,.30);
+}
+
+.btn-back i{
+    font-size:18px;
+
+    transition:.30s;
+}
+
+.btn-back span{
+    transition:.30s;
+}
+
+.btn-back:hover{
+    transform:translateY(-4px);
+
+    background:linear-gradient(135deg,#0b5ed7,#0087f5);
+
+    box-shadow:
+        0 16px 35px rgba(13,110,253,.40);
+}
+
+.btn-back:hover i{
+    transform:translateX(-6px);
+}
+
+.btn-back:hover span{
+    transform:translateX(-2px);
+}
+
+.btn-back:active{
+    transform:scale(.96);
+}
+
+
+/*=========================================
+        BOTÓN NUEVO
+=========================================*/
+
+.btn-new{
+    color:#000;
+
+    background:linear-gradient(135deg,#ffd54f,#ffc107);
+
+    font-weight:700;
+
+    box-shadow:
+        0 10px 25px rgba(255,193,7,.35);
+}
+
+.btn-new i{
+    font-size:18px;
+
+    transition:.30s;
+}
+
+.btn-new span{
+    transition:.30s;
+}
+
+.btn-new:hover{
+    transform:translateY(-4px);
+
+    background:linear-gradient(135deg,#ffca28,#ffb300);
+
+    box-shadow:
+        0 16px 35px rgba(255,193,7,.45);
+}
+
+.btn-new:hover i{
+    transform:rotate(90deg) scale(1.15);
+}
+
+.btn-new:hover span{
+    transform:translateX(2px);
+}
+
+.btn-new:active{
+    transform:scale(.96);
+}
+
+
+
+
+
+
+
+
+
+
+/*==================================================
+        PIZARRA - CATEGORÍAS
+==================================================*/
+
+.pizarra{
+    width:calc(100% - 50px);
+
+    margin:20px auto 30px;
+
+    padding:25px;
+
+    background:#232323;
+
+    border:1px solid #303030;
+    border-radius:18px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.20);
+}
+
+
+/*==================================================
+        TÍTULO
+==================================================*/
+
+.titulo-pizzarra{
+    display:flex;
+    align-items:center;
+
+    margin:0 0 25px;
+
+    padding-bottom:15px;
+
+    border-bottom:1px solid #3c3c3c;
+
+    color:#fff;
+
+    font-family:"Righteous",sans-serif;
+    font-size:25px;
+    font-weight:400;
+    border-bottom:2px solid #f425ca;
+}
+
+
+/*==================================================
+        CONTENEDOR DE CATEGORÍAS
+==================================================*/
+
+.usuarios-cards{
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(280px,1fr));
+
+    gap:20px;
+}
+
+
+/*==================================================
+        TARJETA DE CATEGORÍA
+==================================================*/
+
+.usuario-card{
+    width:100%;
+
+    display:flex;
+    flex-direction:column;
+
+    padding:20px;
+
+    background:#2b2b2b;
+
+    border:1px solid #3c3c3c;
+    border-radius:15px;
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+}
+
+
+/* Hover */
+
+.usuario-card:hover{
+    transform:translateY(-4px);
+
+    border-color:#f425ca;
+
+    box-shadow:
+        0 12px 28px rgba(0,0,0,.30);
+}
+
+
+/*==================================================
+        INFORMACIÓN
+==================================================*/
+
+.usuario-info{
+    width:100%;
+
+    min-width:0;
+}
+
+
+/* Nombre de categoría */
+
+.usuario-info h3{
+    margin:0 0 12px;
+
+    color:#fff;
+
+    font-family:"Righteous",sans-serif;
+    font-size:21px;
+    font-weight:400;
+
+    line-height:1.2;
+
+    overflow-wrap:anywhere;
+}
+
+
+/* Descripción */
+
+.usuario-info p{
+    margin:0;
+
+    color:#bdbdbd;
+
+    font-family:"Inter",sans-serif;
+    font-size:14px;
+
+    line-height:1.6;
+
+    overflow-wrap:anywhere;
+}
+
+
+/* "Descripción:" */
+
+.usuario-info p strong{
+    color:#fff;
+
+    font-weight:600;
+}
+
+
+/*==================================================
+        ACCIONES
+==================================================*/
+
+.usuario-actions{
+    width:100%;
+
+    display:flex;
+    align-items:center;
+
+    gap:10px;
+
+    margin-top:18px;
+    padding-top:15px;
+
+    border-top:1px solid #3c3c3c;
+}
+
+
+/*==================================================
+        BOTONES
+==================================================*/
+
+.btn-edit,
+.btn-delete{
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:7px;
+
+    min-height:38px;
+
+    padding:8px 14px;
+
+    border-radius:9px;
+
+    text-decoration:none;
+
+    font-family:"Inter",sans-serif;
+    font-size:13px;
+    font-weight:600;
+
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        box-shadow .25s ease;
+}
+
+
+/*==================================================
+        EDITAR
+==================================================*/
+
+.btn-edit{
+    color:#9ec5ff;
+
+    background:rgba(63,81,181,.15);
+
+    border:1px solid rgba(63,81,181,.45);
+}
+
+.btn-edit i{
+    transition:.25s;
+}
+
+.btn-edit:hover{
+    color:#fff;
+
+    background:#3f51b5;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 7px 16px rgba(63,81,181,.25);
+}
+
+.btn-edit:hover i{
+    transform:rotate(-10deg) scale(1.1);
+}
+
+
+/*==================================================
+        BORRAR
+==================================================*/
+
+.btn-delete{
+    color:#ff8080;
+
+    background:rgba(244,67,54,.10);
+
+    border:1px solid rgba(244,67,54,.40);
+}
+
+.btn-delete i{
+    transition:.25s;
+}
+
+.btn-delete:hover{
+    color:#fff;
+
+    background:#d32f2f;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 7px 16px rgba(244,67,54,.25);
+}
+
+.btn-delete:hover i{
+    transform:scale(1.12);
+}
+
+
+/*==================================================
+        MENSAJE SIN REGISTROS
+==================================================*/
+
+.usuarios-cards > p{
+    grid-column:1 / -1;
+
+    margin:10px 0;
+
+    padding:25px;
+
+    color:#aaa;
+
+    background:#2b2b2b;
+
+    border:1px dashed #555;
+    border-radius:12px;
+
+    text-align:center;
+
+    font-family:"Inter",sans-serif;
+    font-size:14px;
+}
+
+
+/*==================================================
+        TABLETS
+==================================================*/
+
+@media (max-width:900px){
+
+    .pizarra{
+        width:calc(100% - 40px);
+
+        padding:20px;
+    }
+
+    .usuarios-cards{
+        grid-template-columns:
+            repeat(2,1fr);
+
+        gap:18px;
+    }
+
+}
+
+
+/*==================================================
+        TELÉFONOS
+==================================================*/
+
+@media (max-width:600px){
+
+    .pizarra{
+        width:calc(100% - 30px);
+
+        margin:15px auto 25px;
+
+        padding:17px;
+
+        border-radius:15px;
+    }
+
+    .titulo-pizzarra{
+        margin-bottom:18px;
+
+        padding-bottom:12px;
+
+        font-size:21px;
+    }
+
+    .usuarios-cards{
+        grid-template-columns:1fr;
+
+        gap:15px;
+    }
+
+    .usuario-card{
+        padding:16px;
+    }
+
+    .usuario-info h3{
+        font-size:19px;
+    }
+
+    .usuario-info p{
+        font-size:13px;
+
+        line-height:1.5;
+    }
+
+    .usuario-actions{
+        gap:8px;
+
+        margin-top:15px;
+        padding-top:13px;
+    }
+
+    .btn-edit,
+    .btn-delete{
+        flex:1;
+
+        min-height:40px;
+
+        padding:8px 10px;
+
+        font-size:13px;
+    }
+
+}
+
+
+/*==================================================
+        TELÉFONOS PEQUEÑOS
+==================================================*/
+
+@media (max-width:420px){
+
+    .pizarra{
+        width:calc(100% - 24px);
+
+        padding:14px;
+    }
+
+    .titulo-pizzarra{
+        font-size:19px;
+    }
+
+    .usuario-card{
+        padding:14px;
+    }
+
+    .usuario-info h3{
+        font-size:17px;
+    }
+
+    .usuario-info p{
+        font-size:12px;
+    }
+
+    .usuario-actions{
+        flex-direction:column;
+
+        width:100%;
+    }
+
+    .btn-edit,
+    .btn-delete{
+        width:100%;
+
+        flex:none;
+    }
+
+}
