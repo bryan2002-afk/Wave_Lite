@@ -306,23 +306,26 @@ Abre el navegador y visita:
 ```text
 http://localhost/wave-lite
 ```
+---
 
 ---
-=========================================
 
-## 🪪 Credencial para Iniciar Sesión
+# 🪪 Credencial para Iniciar Sesión
 
-Usuario:
+##❗ Cambielos inmediatamente❗
+
+- Usuario:
 ```text
 admin
 ```
-Pss:
+- Pss:
 ```text
 admin123
 ```        
-❗⚠️ Cambielos inmediatamente ⚠️❗
-=========================================
-```
+
+---
+
+
 ---
 
 # 🔐 Funcionalidades principales
