@@ -307,23 +307,18 @@ Abre el navegador y visita:
 http://localhost/wave-lite
 ```
 
-
+---
 =========================================
 
 ## 🪪 Credencial para Iniciar Sesión
 
-
+      ❗⚠️ Cambielos inmediatamente ⚠️❗
 
 User: admin
-
 Pss:  admin123
 
-
-
-❗⚠️ Cambielos inmediatamente ⚠️❗
-
 =========================================
-
+```
 ---
 
 # 🔐 Funcionalidades principales
